@@ -1,6 +1,17 @@
 
 public class Real {
-   int amount = 10;
-   Real(int amount) {}
-   void times(int multiplier) {}
+	private int amount;
+	
+	Real(int amount) {
+		this.amount = amount;
+	}
+	
+	Real times(int multiplier) {
+      return new Real(amount * multiplier);
+   }
+	
+	public boolean equals(Object object)  {
+		Real real = (Real) object;
+	   return amount == real.amount;
+	}
 }
